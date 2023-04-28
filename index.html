@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>URLを埋め込む</title>
+  </head>
+  <body>
+    <label for="url-input">URLを入力してください:</label>
+    <input type="text" id="url-input">
+    <button onclick="embedUrl()">埋め込む</button>
+    <iframe id="embedded-frame"></iframe>
+
+    <script>
+      function embedUrl() {
+        // 入力欄の値を取得して、URLを作成する
+        var urlInput = document.getElementById("url-input");
+        var url = urlInput.value;
+
+        // URLをiframeで埋め込む
+        var iframe = document.getElementById("embedded-frame");
+        iframe.src = url;
+      }
+    </script>
+  </body>
+</html>
